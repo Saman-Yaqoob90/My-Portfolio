@@ -1,0 +1,111 @@
+/* ========== Colors ========== */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --accent: linear-gradient(135deg, #6c63ff, #903ea0);
+  --card: #f1f1f1;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --card: #1e1e1e;
+}
+
+/* ========== Global ========== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  position: relative;
+  background: var(--accent);
+  color: white;
+}
+
+#mode-btn {
+  position: absolute;
+  left: 15px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: var(--card);
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+}
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: var(--accent);
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input, textarea, button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+button {
+  background: var(--accent);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+footer p {
+  margin: 0;
+}

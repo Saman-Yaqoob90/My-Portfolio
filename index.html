@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <button id="mode-btn">🌙</button>
+    <h1>My Portfolio</h1>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Saman, a beginner web developer passionate about creating responsive and user-friendly websites. I enjoy learning new technologies and building projects that improve my skills in HTML, CSS, and JavaScript. My goal is to grow into a full-stack 
+        developer and contribute to impactful projects.</p>
+  </section>
+   <!-- Projects -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="card">Portfolio Website</div>
+      <div class="card">To-Do List App</div>
+      <div class="card">Registration Form</div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Thanks for visiting my portfolio 🌸 | Let’s connect!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+<script>
+    // Dark / Light Mode Toggle
+const btn = document.getElementById("mode-btn");
+btn.onclick = () => {
+  document.body.classList.toggle("dark");
+  btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+};
+
+document.getElementById("contact-form").onsubmit = (e) => {
+  e.preventDefault();
+  alert("Your message has been sent! (Demo only)");
+};
+
+</script>
+</html>
